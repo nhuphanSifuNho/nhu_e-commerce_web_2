@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowtropolis</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        /*General*/
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+            background-color: #fff0f3;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        img[alt*="icon"] {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;                
+            table-layout: fixed;    /*Forces all columns to have equal width*/
+            border-collapse: collapse;
+            text-align:center;
+        }
+
+        /*Header*/
+        header {
+            background-color: transparent;
+            position: fixed;
+            z-index: 999;
+        }
+        .header_navigation tr:last-child{
+            padding-bottom: 30px;
+            border-bottom: 1px solid black;
+        }
+
+        .top-ads {
+            height: 30px;
+            line-height: 30px; /*Adjust text to align vertically with the top-ads*/
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+
+        .header-search input {
+            width: 70%;
+            height: 35px;
+            border-color: black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .header-search button {
+            background-color: inherit;
+            border:none;
+            vertical-align: middle;
+        }
+
+        /*how to modify the search button with the search bar*/
+        
+        /*Navigation bar*/
+        .header_inline-menu nav {
+            text-align:center;
+        }
+        .header_inline-menu a {
+            display: inline-block;
+            padding: 10px 20px;
+            width: 200px;
+            text-transform: uppercase;
+        }
+        .header_inline-menu a:hover {
+            background-color: #A3C6D9;
+        }
+
+        /*Main*/
+        .section_trendings {
+            background-color: #fff0f3;
+            padding: 50px;
+        }
+        .section_trendings td {
+            border-spacing: 20px;
+        }
+        section h1 {
+            font-size: 3rem;
+            padding: 10px 0px 20px 20px;
+        }
+
+        .section_breeds {
+            background-color: white;
+            margin: 40px 0px;
+        }
+        .section_breeds figcaption {
+            margin: 5px auto 30px;
+        }
+
+        .section_sale td {
+            background-color: white;
+        }
+        .section_sale p {
+            margin: 0px 60px 20px;
+            font-style: italic;
+        }
+
+        img[alt^="trending"] {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        img[alt^="breed"] {
+            width:150px;
+            height:150px;
+            object-fit:cover;
+            border-radius: 50%;
+        }
+        img[alt^="meow"] {
+            width: 170px;
+            height: 150px;
+            object-fit:cover;
+        }
+        .section_sale table {
+            table-layout:initial;
+            border-collapse: separate;
+            border-spacing: 30px;
+            border-color: black;
+            font-size: 12px;
+        }
+        .section_sale td {
+            padding: 15px;
+            box-shadow: -5px 5px 10px 2px grey;
+        }
+        .section_sale figcaption {
+            text-align:left;
+        }
+        /*Footer*/
+        .bottom_social-media img {
+            margin: 20px;
+        }
+        .footer_table td {
+            text-align: left;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <aside class="top-ads">
+            <p>🐾Special Offer: Free Spa for first-time Meowizens with the code TABBY! 🐾</p>
+        </aside>
+
+    <!-- Search bar, Logo, Account-->
+        <div class="header_main">
+            <table class="header_navigation">
+                <tr>
+                    <td>
+                        <form action="/search" method="get" role="search" class="header-search" autocomplete="off">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit"><img src="images/search.png" alt="search icon" style="width:20px; height:20px"></button>
+                        </form>
+                    </td>
+                    <td><a href="index1.html"><img src="images/logo.png" alt="Meowtropolis Logo" style="width:100px; display:block; margin:10px auto 5px"></a></td>
+                    <td><a href="form.html" target="_blank"><img src="images/cart.png" alt="cart icon" style="width:40px; height:40px; right: 70px"></a></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center; font-style:italic; padding-bottom:10px"><strong>Welcome to Meowtropolis! Let's exlore this Purr-fect city with Meowizens!</strong></td>
+                </tr>
+            </table>
+
+        <center>
+        <nav class="header_inline-menu">
+            <a href="index1.html" id="current-page">Shop Meowizens</a>
+            <a href="">Meow Services</a>
+            <a href="#bottom_contact">Contact</a>
+            <a href="form.html">Buy Now</a>
+        </nav>
+        </center>
+        </div>
+    </header>
+    <main>
+
+    <!--Video ads-->
+        <aside class="main_videoads" id="cat-video">
+            <video autoplay loop muted style="width:100%; height:auto">
+                <source src="images/video-catads.mp4" type="video/mp4">
+            </video>
+            <cite><a href="https://www.youtube.com/watch?v=7ySOjHGI3yY&list=PPSV">From Cat coffe CATFE</a></cite>
+        </aside>
+
+    <!--Trendings Section-->
+        <section id="trendings" class="section_trendings">
+            <h1>Meow Trendings</h1>
+            <table>
+                <tr>
+                    <td><img src="images/trending1.jpg" alt="trending british shorthair cat ">
+                        <figcaption>Meowizens Rehoming</figcaption></td>
+                    <td><img src="images/trending2.jpeg" alt="trending meowstagram challenge">
+                        <figcaption>Meowstagram</figcaption></td>
+                    <td><img src="images/trending3.jpeg" alt="trending cat spa">
+                        <figcaption>Meow Spa</figcaption></td>
+                    <td><img src="images/trending4.jpeg" alt="trending cat coffee shop">
+                        <figcaption>Meow Cafe</figcaption></td>
+                </tr>
+            </table>
+        </section>
+
+    <!--Cat breeds-->
+        <section id="breeds" class="section_breeds">
+            <h1>Furry Heritage</h1>
+            <table>
+                <tr>
+                    <td><img src="images/breed1.jpeg" alt="breed british shorthair">
+                        <figcaption>British Shorthair</figcaption></td>
+                    <td><img src="images/breed2.webp" alt="breed persian">
+                        <figcaption>Persian</figcaption></td>
+                    <td><img src="images/breed3.jpeg" alt="breed maine coon">
+                        <figcaption>Maine Coon</figcaption></td>
+                </tr>
+                <tr>
+                    <td><img src="images/breed4.jpeg" alt="breed scottish fold">
+                        <figcaption>Scottish Fold</figcaption></td>
+                    <td><img src="images/breed5.jpg" alt="breed siamese">
+                        <figcaption>Siamese</figcaption></td>
+                    <td><img src="images/breed6.jpeg" alt="breed american shorthair">
+                        <figcaption>American Shorthair</figcaption></td>
+                </tr>
+            </table>
+        </section>
+    
+    <!--Cat for sales-->
+        <section id="sale" class="section_sale">
+            <h1>Meowizens Rehoming</h1>
+            <p>These cats have just travelled from foreign countries to visit Meowtropolis.
+                <br>It would be a pleasure for them if you register a Meowizen Residency.</p>
+            <h2 style="text-align:center">Meowizen Passports</h2>
+            <table>
+                <tr>
+                    <td><img src="images/1-mochi.jpeg" alt="meow mochi">
+                        <figcaption><b>Name:</b> Mochi<hr>
+                        <b>Cat ID: MEOW-20250315-001</b><br>
+                        <b>Breed:</b> British Shorthair<br>
+                        <b>Age:</b> 3 months<br>
+                        <b>Gender:</b> Female<br>
+                        <b>Personalities:</b> playful, affectionate, loves cuddles<hr>
+                        <b>Rehoming Fee:</b> $1,200</figcaption>
+                    </td>
+                    <td><img src="images/2-shadow.jpeg" alt="meow shadow">
+                        <figcaption><b>Name:</b> Shadow<hr>
+                        <b>Cat ID: MEOW-20250315-002</b><br>
+                        <b>Breed:</b> Maine Coon<br>
+                        <b>Age:</b> 5 months<br>
+                        <b>Gender:</b> Male<br>
+                        <b>Personalities:</b> calm, intelligent, enjoys human company<hr>
+                        <b>Rehoming Fee:</b> $1,500</figcaption>
+                    </td>
+                    <td><img src="images/3-snowball.jpeg" alt="meow snowball">
+                        <figcaption><b>Name:</b> Snowball<hr>
+                        <b>Cat ID:</b> MEOW-20250315-003<br>
+                        <b>Breed:</b> Ragdoll<br>
+                        <b>Age:</b> 4 months<br>
+                        <b>Gender:</b> Female<br>
+                        <b>Personalities:</b> gentle, loves being held, good with kids<hr>
+                        <b>Rehoming Fee:</b> $1,300</figcaption>
+                    </td>
+                    <td><img src="images/4-tiger.jpeg" alt="meow tiger">
+                        <figcaption><b>Name:</b> Tiger<hr>
+                        <b>Cat ID: MEOW-20250315-004</b><br>
+                        <b>Breed:</b> Bengal<br>
+                        <b>Age:</b> 6 months<br>
+                        <b>Gender:</b> Male<br>
+                        <b>Personalities:</b> energetic, adventurous, loves climbing<hr>
+                        <b>Rehoming Fee:</b> $1,800</figcaption>
+                    </td>
+                    <td><img src="images/5-luna.webp" alt="meow luna">
+                        <figcaption><b>Name:</b> Luna<hr>
+                        <b>Cat ID: MEOW-20250315-005</b><br>
+                        <b>Breed:</b> Scottish Fold<br>
+                        <b>Age:</b> 4 months<br>
+                        <b>Gender:</b> Female<br>
+                        <b>Personalities:</b> quiet, affectionate, loves sitting on laps<hr>
+                        <b>Rehoming Fee:</b> $1,400</figcaption>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="images/6-leo.jpeg" alt="meow leo">
+                        <figcaption><b>Name:</b> Leo<hr>
+                        <b>Cat ID: MEOW-20250315-006</b><br>
+                        <b>Breed:</b> Persia<br>
+                        <b>Age:</b> 5 months<br>
+                        <b>Gender:</b> Male<br>
+                        <b>Personalities:</b> Calm, enjoys grooming, loves luxury<hr>
+                        <b>Rehoming Fee:</b> $1,000</figcaption>
+                    </td>
+                    <td><img src="images/7-oreo.jpeg" alt="meow oreo">
+                        <figcaption><b>Name:</b> Oreo<hr>
+                        <b>Cat ID: MEOW-20250315-007</b><br>
+                        <b>Breed:</b> American Shorthair<br>
+                        <b>Age:</b> 3 months<br>
+                        <b>Gender:</b> Female<br>
+                        <b>Personalities:</b> curious, loves playing with toys<hr>
+                        <b>Rehoming Fee:</b> 	$600</figcaption>
+                    </td>
+                    <td><img src="images/8-simba.jpeg" alt="meow simba" style="object-position:50% 20%">
+                        <figcaption><b>Name:</b> Simba<hr>
+                        <b>Cat ID: MEOW-20250315-008</b><br>
+                        <b>Breed:</b> Abyssinian<br>
+                        <b>Age:</b> 5 months<br>
+                        <b>Gender:</b> Male<br>
+                        <b>Personalities:</b> highly active, loves running and jumping<hr>
+                        <b>Rehoming Fee:</b> $1,100</figcaption>
+                    </td>
+                    <td><img src="images/9-misty.jpeg" alt="meow Misty">
+                        <figcaption><b>Name:</b> Misty<hr>
+                        <b>Cat ID: MEOW-20250315-009</b><br>
+                        <b>Breed:</b> Russian Blue<br>
+                        <b>Age:</b> 4 months<br>
+                        <b>Gender:</b> Female<br>
+                        <b>Personalities:</b> Shy but loving, enjoys quiet environments<hr>
+                        <b>Rehoming Fee:</b> $1,300</figcaption>
+                    </td>
+                    <td><img src="images/10-gartfield.jpeg" alt="meow Gartfield">
+                        <figcaption><b>Name:</b> Gartfield<hr>
+                        <b>Cat ID: MEOW-20250315-010</b><br>
+                        <b>Breed:</b>  Exotic Shorthair<br>
+                        <b>Age:</b> 5 months<br>
+                        <b>Gender:</b> Male<br>
+                        <b>Personalities:</b> Playful, lazy, loves food<hr>
+                        <b>Rehoming Fee:</b> $1,500
+                    </figcaption>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    
+    <!--Cat Media-->
+        <aside style="background-color:white; padding:30px">
+            <table>
+                <tr>
+                    <td rowspan="3"><iframe width="560" height="315" src="https://www.youtube.com/embed/GAUfhZE02Ns?si=Uz5z91X8KEjXV9nm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                    <td><strong>Meowtropolis Location</strong><br>Let's enjoy some music!</td>
+                </tr>
+                <tr>
+                    <td><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62714.29060743251!2d106.6392976!3d10.7619602!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbea5fe3db1%3A0xfae94aca5709003f!2zxJDhuqFpIGjhu41jIFJNSVQgVmnhu4d0IE5hbSAtIEPGoSBz4bufIE5hbSBTw6BpIEfDsm4!5e0!3m2!1sen!2s!4v1742139140574!5m2!1sen!2s" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                </tr>
+                <tr>    
+                    <td>    <!--Cat audio-->
+                        <audio controls autoplay muted>
+                            <source src="cat-song.mp3" type="audio/mp3">
+                        </audio>
+                    </td>
+                </tr>
+            </table>
+        </aside>
+
+    </main>
+    <footer style="padding-top:40px">
+        <center>
+            <h1 id="bottom_contact">Follow us</h1>
+            <nav class="bottom_social-media" >
+                <a href="https://www.facebook.com/catfevn/" target="_blank"><img src="images/social-media_icons/facebook.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/catfevn/?hl=en" target="_blank"><img src="images/social-media_icons/pinterest.png" alt="pinterest icon"></a>
+                <a href="https://www.pinterest.com/pin/552816923029921360/" target="_blank"><img src="images/social-media_icons/instagram.png" alt="instagram icon"></a>
+                <a href="https://www.tiktok.com/@catfe_cat_coffee?lang=en" target="_blank"><img src="images/social-media_icons/tik-tok.png" alt="tiktok icon"></a>
+            </nav>
+        </center>
+        <hr>
+        <aside class="footer_table" style="margin:30px">
+            <table>
+                <tr>
+                    <td>
+                        <nav class="footer_shop">
+                            <h3>Shop</h3>
+                            <a href="#trendings">Trendings</a><br>
+                            <a href="#breeds">Breeds</a><br>
+                            <a href="#sale">Cats for Sale</a>
+                        </nav>
+                    </td>
+                    <td>
+                        <nav>
+                            <h3>Services</h3>
+                            <a href="">Cat Spa</a><br>
+                            <a href="">Cat Hotel</a><br>
+                            <a href="">Cat Cafe</a>
+                        </nav>                      
+                    </td>
+                    <td>
+                        <nav>
+                            <h3>Get in touch</h3>
+                            <a href="mailto:contact@meowtropolis.com">Email us</a><br>
+                            <a href="tel:0123456789">Call us</a><br>
+                            <a href="https://g.co/kgs/NJHG9iw">Meet us</a>
+                        </nav>
+                    </td>
+                    <td>
+                        <nav>
+                            <h3>About</h3>
+                            <a>Who are we</a><br>
+                            <a>#Meowstagram</a>
+                        </nav>
+                    </td>
+                </tr>
+            </table>
+        </aside><hr>
+        <center><p>&copy; 2025 Meowtropolis &reg;. No rights reserved. | Not all content, including text, images and design is copyrighted. | Unthorized use is permitted.</p></center>
+    </footer>
+</body>
+</html>

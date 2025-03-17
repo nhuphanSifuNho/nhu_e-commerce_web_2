@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>Order form</title>
+    <style>
+        /*General*/
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        img[alt*="icon"] {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;                
+            table-layout: fixed;    /*Forces all columns to have equal width*/
+            border-collapse: collapse;
+            text-align:center;
+        }
+        /*Header*/
+        header {
+            background-color: white;
+        }
+        .header_navigation tr:last-child{
+            padding-bottom: 30px;
+            border-bottom: 1px solid black;
+        }
+
+        .top-ads {
+            height: 30px;
+            line-height: 30px; /*Adjust text to align vertically with the top-ads*/
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+
+        .header-search input {
+            width: 70%;
+            height: 35px;
+            border-color: black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .header-search button {
+            background-color: inherit;
+            border:none;
+            vertical-align: middle;
+        }
+
+        /*how to modify the search button with the search bar*/
+        
+        /*Navigation bar*/
+        .header_inline-menu nav {
+            text-align:center;
+        }
+        .header_inline-menu a {
+            display: inline-block;
+            padding: 10px 20px;
+            width: 200px;
+            text-transform: uppercase;
+        }
+        .header_inline-menu a:hover {
+            background-color: #A3C6D9;
+        }
+        main {
+            width: 800px;
+            margin: auto;
+            min-width:400px;
+        }
+        /*main*/
+        body {
+            background-color: #A3C6D9;
+        }
+        h1 {
+            margin: 50px auto 10px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        p {
+            text-align:center;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+        h2 {
+            margin: 10px;
+            padding: 0px;
+            text-align:center;
+        }
+        .user-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: auto 150px;
+            border-style:dashed;
+        }
+        .user-info fieldset {
+            border: none;
+        }
+        .user-info legend {
+            margin: 10px 0px;
+            font-weight: bold;
+        }
+        .group-block ,.group-block label{
+            margin: 10px 30px;
+        }
+        .user-info button {
+            float: right;
+        }
+        .chosen-cats {
+            clear:both;
+            background-color: white;
+            border-radius: 15px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+        th, tfoot {
+            margin: 20px;
+            background-color:#A3C6D9;
+            height: 50px;
+        }
+        .cat-table {
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+        td {
+            text-align: left;
+            padding: 10px 20px;
+        }
+        td:first-child {
+            text-align: right;
+        }
+
+        td:last-child{
+            text-align: center;
+        }
+        #buy, #reset {
+            background-color: rgb(255, 94, 0);
+            width: 100px;
+            border-radius: 10px;
+            height: 30px;
+            border:none;
+        }
+        #reset {
+            background-color: rgba(13, 128, 0, 0.573);
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <aside class="top-ads">
+            <p>🐾Special Offer: Free Spa for first-time Meowizens with the code TABBY! 🐾</p>
+        </aside>
+
+    <!-- Search bar, Logo, Account-->
+        <div class="header_main">
+            <table class="header_navigation">
+                <tr>
+                    <td>
+                        <form action="/search" method="get" role="search" class="header-search" autocomplete="off">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit"><img src="images/search.png" alt="search icon" style="width:20px; height:20px"></button>
+                        </form>
+                    </td>
+                    <td><a href="index1.html"><img src="images/logo.png" alt="Meowtropolis Logo" style="width:100px; display:block; margin:10px auto 5px"></a></td>
+                    <td><a href="form.html" target="_blank"><img src="images/cart.png" alt="cart icon" style="width:40px; height:40px; right: 70px"></a></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center; font-style:italic; padding-bottom:10px"><strong>Welcome to Meowtropolis! Let's exlore this Purr-fect city with Meowizens!</strong></td>
+                </tr>
+            </table>
+
+        <center>
+        <nav class="header_inline-menu">
+            <a href="index1.html" id="current-page">Shop Meowizens</a>
+            <a href="">Meow Services</a>
+            <a href="">Contact</a>
+            <a href="form.html">Buy Now</a>
+        </nav>
+        </center>
+        </div>
+    </header>
+    <main>
+        <h1>Meowizen Rehoming Resgistration Form</h1>
+        <p>You are such a warm-hearted guarandian angel for those meows!</p>
+        <form action="/form" method="post" enctype="application/x-www-form-urlencoded" class="user-info">
+            <h2>The Meow Angel</h2>
+            <fieldset name="user-details">
+                <legend>Personal Information</legend>
+                <div class="group-block">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name " required>
+                </div>
+                <div class="group-block">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="group-block">
+                    <label>Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="group-block">
+                    <label for="phone">Phone:</label>
+                    <input type="number" id="phone" name="phone" placeholder="0123456789" required>
+                </div>
+            </fieldset>
+            <fieldset name="user-address">
+                <legend>Current Address</legend>
+                <div class="group-block">
+                    <label for="street">Street Address:</label>
+                    <input type="text" id="street" name="street" placeholder="123 Queeen Street" required>
+                </div>
+                <div class="group-block">
+                    <label for="ward">Ward:</label>
+                        <input type="text" id="ward" name="ward" style="width:25%" placeholder="4" required>
+                </div>
+                <div class="group-block">
+                    <label for="district">District:</label>
+                        <select id="district" name="district" required>
+                            <option value="">-- Select a district</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="binh thanh">Binh Thanh</option>
+                            <option value="tan binh">Tan Binh</option>
+                            <option value="tan phu">Tan Phu</option>
+                            <option value="phu nhuan">Phu Nhuan</option>
+                            <option value="go vap">Go Vap</option>
+                            <option value="binh tan">Binh Tan</option>
+                        </select>
+                </div>
+                <div class="group-block">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" value="Ho Chi Minh City, Vietnam" readonly>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form class="chosen-cats" action="/form" method="get" enctype="application/x-www-form-urlencoded">
+            <h2>The Chosen Meowisens</h2>
+            <table class="cat-table">
+            <!--Choose cat-->
+                <tr>
+                    <th colspan="2">Select Your Favorite Cats</th>
+                </tr>
+                <tr>
+                    <td>Avaible cats:</td>
+                    <td>
+                        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:5px; text-align:left">
+                            <label><input type="checkbox" name="cat-name" value="mochi">Mochi</label>
+                            <label><input type="checkbox" name="cat-name" value="shadow">Shadow</label>
+                            <label><input type="checkbox" name="cat-name" value="snowball">Snow Ball</label>
+                            <label><input type="checkbox" name="cat-name" value="tiger">Tiger</label>
+                            <label><input type="checkbox" name="cat-name" value="luna">Luna</label>
+                            <label><input type="checkbox" name="cat-name" value="leo">Leo</label>
+                            <label><input type="checkbox" name="cat-name" value="oreo">Oreo</label>
+                            <label><input type="checkbox" name="cat-name" value="simba">Simba</label>
+                            <label><input type="checkbox" name="cat-name" value="misty">Misty</label>
+                            <label><input type="checkbox" name="cat-name" value="gartfield">Gartfield</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Have you owned a cat before?</td>
+                    <td>
+                        <label><input type="radio" name="own-cat" value="yes" required>Yes</label>
+                        <label><input type="radio" name="own-cat" value="no">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>How would you like to receice your cat?</td>
+                    <td><label><input type="radio" name="pickup" value="delivery" required>Home Delivery</label>
+                        <label><input type="radio" name="pickup" value="store">Pick Up at Store</label></td>
+                </tr>
+            <!--Special Deals-->
+                <tr>
+                    <th colspan="2">Special Deals
+                        <br><span style="font-style:italic; font-size:0.75rem; font-weight:normal">Only for Pick Up at Store</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Cat Spa Service</td>
+                    <td><label><input type="checkbox" name="spa" value="yes">Include a spa treatment before devilery</Label></td>
+                </tr>
+                <tr>
+                    <td>Cat Cafe Membership</td>
+                    <td><label><input type="checkbox" name="catcafe" value="yes">Include a memebership discount for Meowtropolist Cat Cafe</label></td>
+                </tr>
+            <!--Payment Details-->
+                <tr>
+                    <th colspan="2">Payment Details</th>
+                </tr>
+                <tr>
+                    <td>Preferred Payment Method</td>
+                    <td><select name="payment" required>
+                        <option value="">--Choose your preferred Payment Method</option>
+                        <option value="cash">Cash</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="credit">Credit Card</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Share your cat's Meowstagram post to claim a discount</td>
+                    <td><input type="file" name="evidence" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td>Special requests:</td>
+                    <td><textarea name="special-request" style="width:100%;min-height:50px;" placeholder="Feel free to let us know..."></textarea></td>
+                </tr>
+            <!--Submit-->
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><b>Note: Meowizens have to pack their luggages</b>
+                            <br>Please give them a least 24hrs to send you the fee and other information.<br><br>
+                            <p><label><input type="checkbox" name="agree" required>Agree to Terms and Conditions</label></p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="button">
+                <button type="submit" id="buy">Buy Now</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
