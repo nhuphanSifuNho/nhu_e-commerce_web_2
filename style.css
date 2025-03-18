@@ -18,6 +18,10 @@
             height: 30px;
             object-fit: cover;
         }
+        .button{
+            width:20px; 
+            height:20px;
+        }
         .imgCat{
             align-items: center;
             width: 35%;

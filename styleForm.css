@@ -13,6 +13,18 @@
       height: 30px;
       object-fit: cover;
   }
+          .imgCat{
+            align-items: center;
+            width: 35%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 50px;
+        }
+        .moto{
+            width: 10%;
+            align-content: flex-end;
+            text-align: justify;
+        }
   table {
       width: 100%;                
       table-layout: fixed;    /*Forces all columns to have equal width*/
