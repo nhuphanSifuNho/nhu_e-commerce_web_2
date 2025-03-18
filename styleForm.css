@@ -1,0 +1,161 @@
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+      text-decoration: none;
+      color: black;
+  }
+  img[alt*="icon"] {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+  }
+  table {
+      width: 100%;                
+      table-layout: fixed;    /*Forces all columns to have equal width*/
+      border-collapse: collapse;
+      text-align:center;
+  }
+  /*Header*/
+  header {
+      background-color: white;
+      position: fixed;
+      margin: auto;
+      top: 0%;
+      margin-bottom: 100px;
+  }
+  .header_navigation tr:last-child{
+      padding-bottom: 30px;
+      border-bottom: 1px solid black;
+  }
+
+  .top-ads {
+      height: 30px;
+      line-height: 30px; /*Adjust text to align vertically with the top-ads*/
+      background-color: black;
+      color: white;
+      text-align: center;
+  }
+
+
+  .header-search input {
+      width: 70%;
+      height: 35px;
+      border-color: black;
+      border-radius: 15px;
+      padding: 10px;
+  }
+  .header-search button {
+      background-color: inherit;
+      border:none;
+      vertical-align: middle;
+  }
+
+  /*how to modify the search button with the search bar*/
+  
+  /*Navigation bar*/
+  .header_inline-menu nav {
+      text-align:center;
+  }
+  .header_inline-menu a {
+      display: inline-block;
+      padding: 10px 20px;
+      width: 200px;
+      text-transform: uppercase;
+  }
+  .header_inline-menu a:hover {
+      background-color: #A3C6D9;
+  }
+  main {
+      width: 800px;
+      margin: auto;
+      padding-top: 300px;
+  }
+  .formStyle{
+      min-width:400px;
+      top: 60%;
+  }
+  /*main*/
+  body {
+      background-color: #A3C6D9;
+  }
+  h1 {
+      margin: 50px auto 10px;
+      text-align: center;
+      font-size: 2.5rem;
+  }
+  p {
+      text-align:center;
+      font-style: italic;
+      margin-bottom: 40px;
+  }
+  h2 {
+      margin: 10px;
+      padding: 0px;
+      text-align:center;
+  }
+  .user-info {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin: auto 150px;
+      border-style:dashed;
+  }
+  .user-info fieldset {
+      border: none;
+  }
+  .user-info legend {
+      margin: 10px 0px;
+      font-weight: bold;
+  }
+  .group-block ,.group-block label{
+      margin: 10px 30px;
+  }
+  .user-info button {
+      float: right;
+  }
+  .chosen-cats {
+      clear:both;
+      background-color: white;
+      border-radius: 15px;
+      margin: 50px auto;
+      padding: 30px;
+  }
+  th, tfoot {
+      margin: 20px;
+      background-color:#A3C6D9;
+      height: 50px;
+  }
+  .cat-table {
+      border-collapse: separate;
+      border-spacing: 10px;
+  }
+  td {
+      text-align: left;
+      padding: 10px 20px;
+  }
+  td:first-child {
+text-align: right;
+  }
+
+  td:last-child{
+      text-align: center;
+  }
+  #buy, #reset {
+      background-color: rgb(255, 94, 0);
+      width: 100px;
+      border-radius: 10px;
+      height: 30px;
+      border:none;
+  }
+  #reset {
+      background-color: rgba(13, 128, 0, 0.573);
+  }
+  .button {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
