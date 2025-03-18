@@ -30,6 +30,10 @@
         /*Header*/
         header {
             background-color: white;
+            position: fixed;
+            margin: auto;
+            top: 0%;
+            margin-bottom: 100px;
         }
         .header_navigation tr:last-child{
             padding-bottom: 30px;
@@ -76,7 +80,11 @@
         main {
             width: 800px;
             margin: auto;
+            padding-top: 300px;
+        }
+        .formStyle{
             min-width:400px;
+            top: 60%;
         }
         /*main*/
         body {
@@ -195,7 +203,7 @@
         </center>
         </div>
     </header>
-    <main>
+    <main id="formStyle">
         <h1>Meowizen Rehoming Resgistration Form</h1>
         <p>You are such a warm-hearted guarandian angel for those meows!</p>
         <form action="/form" method="post" enctype="application/x-www-form-urlencoded" class="user-info">
